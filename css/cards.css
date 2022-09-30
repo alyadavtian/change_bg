@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400&display=swap');
+* {
+    box-sizing: border-box;
+  }
+ 
+body{
+    font-family: 'Montserrat', sans-serif; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 253, 247);
+    overflow: scroll;
+    
+}
+.sidenav a {
+    position: absolute; /* Position them relative to the browser window */
+    left: -80px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: black; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#back {
+    top: 50px;
+    background-color:lemonchiffon;
+}
+
+#blog {
+    top: 110px;
+    background-color:burlywood;
+}
+
+#projects {
+    top: 170px;
+    background-color: #f44336; /* Red */
+}
+
+#contact {
+    top: 200px;
+    background-color: #555 /* Light Black */
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 46,5%;
+    padding: 0 10px;
+  }
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+    height: 10em;
+    position: relative ;
+    margin: 0;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+.card{
+    font-family: 'Montserrat', sans-serif; 
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px 210px 70px;
+    grid-template-areas: "image" "text" "stats";
+    margin: 20px;
+
+    
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    
+
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-image{
+    grid-area: image;
+    background: url(https://images.unsplash.com/photo-1623874865630-d06479c534cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU4fHxob2JieXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+
+.card-image2{
+    grid-area: image;
+    background: url(https://terve.su/wp-content/uploads/2018/09/helsinki-activities.jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+.card-image3{
+    grid-area: image;
+    background: url(https://img.lovepik.com/photo/50051/3056.jpg_wh860.jpg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+    margin-bottom: 0px;
+}
+
+.card-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 350;
+    font-size:larger;
+    grid-area: text;
+    margin: 25px ;
+}
+.card-text .date{
+    color:burlywood;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.card-text p {
+    color: black;
+    font-size: 19px;
+    font-weight: 250;
+    color: grey;
+}
+.card-text h2 {
+    margin-top:3px;
+    font-size: 28px;
+
+}
+.card-stats{
+    grid-area: stats;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: lemonchiffon;
+    padding: 15px ;
+    font-family: 'Montserrat ', sans-serif;
+
+
+}
+.card-stats stat {
+    display: flex;
+    align-items: center;
+    justify-content: column;
+    padding: 10px;
+    color: white;
+}
+.card-stats .type {
+font-size: 13px;
+font-weight: 300;
+text-transform: uppercase;
+}
+.card-stats .value {
+    font-size: 15px;
+    font-weight: 500;
+}
+.card-stats .border {
+    border-left: 1px solid rgb(219, 214, 168) ;
+    border-right: 1px solid rgb(219, 214, 168) ;
+}
+.card-stats .value sup {
+    font-size:13px
+}
+
